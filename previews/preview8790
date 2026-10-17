@@ -20,13 +20,10 @@ copy ia ic
 snip ic 0 icd/4
 copy ic ica
 rotate ica 90
-cover ica w h
 copy ic icb
 rotate icb 180
-cover icb w h
 copy ic icc
 rotate icc 270
-cover icc w h
 fadeout icc iccd
 concatmultiple ic ica icb icc
 concatmultiple i ia ib ic
