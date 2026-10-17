@@ -29,6 +29,7 @@ rotate icc 270
 cover icc w h
 fadeout icc iccd
 concatmultiple ic ica icb icc
-cover ic w h
 concatmultiple i ia ib ic
+cover i w h
+render i default preview8790
 }
