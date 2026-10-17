@@ -32,7 +32,7 @@ stretch icb 1.3 1
 cover icc w h
 fadeout icc iccd
 copy i id
-snip id {get:e}/2
+snip id 0 {get:e}/2
 copy id ida
 flop ida
 invert ida
@@ -46,6 +46,7 @@ copy id ida
 flop ida
 hueshifthsv ida 27
 audiopitch ida 2**(2/12)
+concat id ida
 concatmultiple ic ica icb icc
 concatmultiple i ia ib ic id
 cover i w h
