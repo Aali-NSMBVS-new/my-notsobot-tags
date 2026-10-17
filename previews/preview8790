@@ -41,6 +41,11 @@ audiopitch idaa 2**(7.5/12)
 audioputmix ida idaa
 volume ida 3
 concat id0 ida
+copy id0 id1
+convert id1 audio/flac
+repeatduration id id0d
+overlay id id0
+audioputreplace id id1
 copy id ida
 flop ida
 hueshifthsv ida 27
