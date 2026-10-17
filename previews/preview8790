@@ -27,15 +27,20 @@ concat ic ic
 concat ic ic
 copy i id
 repeatduration id {get:e}/2
+copy id id0
+copy id0 id0a
+audiopitch id0 2**(-0.5/12)
+audiopitch id0a 2**(-7.5/12)
+audioputmix id0 id0a
+volume id0 3
+invert id0
 copy id ida
-flop ida
-invert ida
 copy ida idaa
 audiopitch ida 2**(0.5/12)
 audiopitch idaa 2**(7.5/12)
 audioputmix ida idaa
 volume ida 3
-concat id ida
+concat id0 ida
 copy id ida
 flop ida
 hueshifthsv ida 27
