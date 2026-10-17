@@ -15,12 +15,7 @@ audiopitch ia 2**(1/12)
 hueshifthsv ia 54
 copy i ib
 audiopitch ib 2**(-2/12)
-waaw ib
-hueshifthsv ib 180
-rotate ib 90
-waves ib h/32 w*0.2395 w/127.5*0.985
-rotate ib -90
-cover ib w h
+hueshifthsv ib -108
 copy ia ic
 snip ic 0 icd/4
 copy ic ica
