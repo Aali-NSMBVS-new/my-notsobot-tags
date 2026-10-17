@@ -17,22 +17,16 @@ copy i ib
 audiopitch ib 2**(-2/12)
 hueshifthsv ib -108
 copy ia ic
-snip ic 0 icd/4
+repeatduration ic {get:e}/8
 copy ic ica
-audiopitch ica 2**(1/60)
-stretch ica 1.1 1
-cover ica w h
-copy ic icb
-audiopitch icb 2**(10/60)
-stretch icb 1.2 1
-cover icb w h
-copy ic icc
-audiopitch icc 2**(20/60)
-stretch icb 1.3 1
-cover icc w h
-fadeout icc iccd
+invert ica
+audiopitch ica 2**(7.65/12)
+concat ic ica
+volume ic 1.105
+concat ic ic
+concat ic ic
 copy i id
-snip id 0 {get:e}/2
+repeatduration id {get:e}/2
 copy id ida
 flop ida
 invert ida
