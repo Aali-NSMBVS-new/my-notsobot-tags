@@ -18,7 +18,7 @@ audiopitch ib 2**(-2/12)
 waaw ib
 hueshifthsv ib 180
 rotate ib 90
-waves ib h/321 w0.2395 w/127.5*0.985
+waves ib h/32 w*0.2395 w/127.5*0.985
 rotate ib -90
 cover ib w h
 copy ia ic
