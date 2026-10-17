@@ -49,7 +49,6 @@ audiopitch if 2**(-2/12)
 hueshifthsv if -108
 copy ie ig
 concatmultiple id ie if ig
-concatmultiple ic ica icb icc
 concatmultiple i ia ib ic id
 cover i w h
 render i default preview8790
