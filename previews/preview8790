@@ -26,5 +26,6 @@ copy ic icc
 rotate icc 270
 fadeout icc iccd
 concatmultiple ic ica icb icc
+cover ic w h
 concatmultiple i ia ib ic
 }
