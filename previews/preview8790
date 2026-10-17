@@ -1,0 +1,35 @@
+-# Use `.t sync+` if you want the video synced to audio
+-# You know the routine.
+-# Stage: `Early Alpha`
+{set:s|{or:{arg:0}|0}}
+{set:e|{if:{arg:1}|=|vidlen|then:d|else:{or:{arg:1}|d}}}
+{iscript:
+load {iv} i
+get i width w
+get i height h
+get i duration d
+snip i {get:s}
+repeatduration i {get:e}
+copy i ia
+audiopitch ia 2**(1/12)
+hueshifthsv ia 54
+copy i ib
+audiopitch ib 2**(-2/12)
+waaw ib
+hueshifthsv ib 180
+rotate ib 90
+waves ib h/321 w0.2395 w/127.5*0.985
+rotate ib -90
+cover ib w h
+copy ia ic
+snip ic 0 icd/4
+copy ic ica
+rotate ica 90
+copy ic icb
+rotate icb 180
+copy ic icc
+rotate icc 270
+fadeout icc iccd
+concatmultiple ic ica icb icc
+concatmultiple i ia ib ic
+}
