@@ -19,11 +19,11 @@ hueshifthsv ib -108
 copy ia ic
 snip ic 0 icd/4
 copy ic ica
-rotate ica 90
+audiopitch ica 2**(1/60)
 copy ic icb
-rotate icb 180
+audiopitch icb 2**(10/60)
 copy ic icc
-rotate icc 270
+audiopitch icc 2**(20/60)
 fadeout icc iccd
 concatmultiple ic ica icb icc
 concatmultiple i ia ib ic
