@@ -1,6 +1,6 @@
 -# Use `.t sync+` if you want the video synced to audio
 -# You know the routine.
-Full release as of 17.10.26
+Full release as of late 18.10.26
 {set:s|{or:{arg:0}|0}}
 {set:e|{if:{arg:1}|=|vidlen|then:d|else:{or:{arg:1}|d}}}
 {iscript:
@@ -15,12 +15,14 @@ audiopitch ia 2**(1/12)
 hueshifthsv ia 54
 copy i ib
 audiopitch ib 2**(-2/12)
-hueshifthsv ib -108
+hueshifthsv ib 180
+waaw ib
+tvsimulator ib 0.85
 copy ia ic
 repeatduration ic {get:e}/8
 copy ic ica
 invert ica
-audiopitch ica 2**(7.65/12)
+audiopitch ica 2**(6.85/12)
 concat ic ica
 volume ic 1.105
 concat ic ic
@@ -56,7 +58,9 @@ audiopitch ie 2**(1/12)
 hueshifthsv ie 54
 copy id if
 audiopitch if 2**(-2/12)
-hueshifthsv if -108
+hueshifthsv if 180
+waaw if
+tvsimulator if 0.85
 copy ie ig
 concatmultiple id ie if ig
 concatmultiple i ia ib ic id
